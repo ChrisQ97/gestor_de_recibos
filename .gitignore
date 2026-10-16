@@ -1,0 +1,91 @@
+# ============================================================
+# Dependencias
+# ============================================================
+node_modules/
+
+# ============================================================
+# Compilación y empaquetado (electron-vite, electron-builder)
+# ============================================================
+out/
+dist/
+release/
+*.tsbuildinfo
+
+# ============================================================
+# Datos de la aplicación (NUNCA versionar datos de clientes)
+# ============================================================
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+# Carpeta del modo portable
+/data/
+# Marcador del modo portable (lo agrega el build)
+portable.flag
+backups/
+*.bak
+
+# Recibos y exportaciones generadas
+output/
+exports/
+*.pdf
+*.csv
+# Excepto ejemplos y documentación del repositorio
+!docs/**/*.pdf
+!docs/**/*.csv
+
+# ============================================================
+# Secretos y certificados (firma de código, claves)
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+secrets/
+
+# ============================================================
+# Pruebas, cobertura y análisis
+# ============================================================
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+.vitest/
+.eslintcache
+.cache/
+.semgrep/
+
+# Reportes y SBOM generados por el CI
+sbom*.json
+sbom*.xml
+audit-report.*
+
+# ============================================================
+# Logs
+# ============================================================
+*.log*
+logs/
+
+# ============================================================
+# Editores
+# ============================================================
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================================
+# Sistema operativo
+# ============================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
